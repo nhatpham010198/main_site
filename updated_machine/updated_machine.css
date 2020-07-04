@@ -1,0 +1,154 @@
+body {
+  background-color: #EEE;
+}
+
+h1{
+  color: #457cb7;
+  margin-top: 50px;
+}
+
+#container {
+  background-color: white;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .form-group {
+  float: left;
+  margin-left: 20px;
+  width: 160px;
+  height: auto;
+}
+
+.form-control {
+  position: relative;
+  height: 20px;
+  font-size: 14px;
+  color: #457cb7;
+  border: none;
+  border-bottom: 1px solid #333;
+  border-radius: 0;
+  transition: .5s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #222;
+}
+
+label{
+  font-weight: bold;
+  position: relative;
+  top: -35px;
+  left: -10px;
+  font-size: 15px;
+  padding-left: 15px;
+  line-height: 50px;
+  transition: .5s ease;
+}
+
+.form-control:focus + label,
+.form-control:valid + label{
+  top: -60px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+
+#result_table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 800px;
+  float: right;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rbga(0,0,0,0.15);
+
+}
+
+.content-table thead tr{
+  background-color: #457cb7;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid  #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid  #457cb7;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+/* .dropdown-block{
+  padding-bottom: 45px;
+} */
+
+#dropdown-block-label {
+    font-weight: bold;
+    position: relative;
+    left: -10px;
+    top: -60px;
+    font-size: 14px;
+    padding-left: 13px;
+    line-height: 50px;
+    transition: .5s ease;
+}
+
+#footer{
+  clear: both;
+  padding: 10px;
+  background-color: #999999;
+  color: white ;
+  text-align: right;
+}
+
+#parameter{
+  display: block;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+#country{
+  width:148px;
+  height:23px;
+}
+
+#cp{
+  width:148px;
+  height:23px;
+}
+
+#dropdown{
+  width:156px;
+  height:23px;
+  margin-bottom: 1em;
+}
+
+#introduction{
+  float:right;
+  width: 750px;
+  text-align: justify;
+  margin-right: 40px;
+}
+
+.math{
+  text: 20px;
+}

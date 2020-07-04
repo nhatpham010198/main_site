@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Binomial option pricing model</title>
+    <link rel="stylesheet" type = "text/css" href="static/updated_machine.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main">
+        <h1 style="text-align: center">Binomial Pricing</h1>
+        <div>
+          {% if options|length < 1 %}
+          <h4 style="text-align: center">There are no option to price. Create one below!</h4>
+          {% else %}
+          <table class="content-table" id ="result_table">
+            <thead>
+              <tr>
+                <th>Price at t=0</th>
+                <th>Number of periods</th>
+                <th>Implied volatility</th>
+                <th>Interest rate</th>
+                <th>Strike price</th>
+                <th>Option type (US or EU)</th>
+                <th>Dividend yield</th>
+                <th>Time to maturity</th>
+                <th>Call = 1, put = -1</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {% for option in options %}
+              <tr>
+                <td>{{ option.p_0 }}</td>
+                <td>{{ option.n }}</td>
+                <td>{{ option.v }}</td>
+                <td>{{ option.r }}</td>
+                <td>{{ option.s }}</td>
+                <td>{{ option.country }}</td>
+                <td>{{ option.c }}</td>
+                <td>{{ option.T }}</td>
+                <td>{{ option.cp }}</td>
+                <td>{{ option.round_valuation}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+
+          </table>
+          {% endif %}
+
+
+        </div>
+        <div class="form-group" id="input">
+          <form action="/" method="POST">
+
+            <div class="input-block" id="input-block-p_0">
+              <input type="float" name="p_0" class="form-control" id="p_0" required>
+              <label for="p_0">Inital price at t=0</label>
+            </div>
+
+            <div class="input-block" id="input-block-n">
+              <input type="number" name="n" class="form-control" id="n" required>
+              <label for="n">Number of periods</label>
+            </div>
+
+            <div class="input-block" id="input-block-v">
+              <input type="float" name="v" class="form-control" id="v" required>
+              <label for="v">Implied volatility</label>
+            </div>
+
+            <div class="input-block" id="input-block-r">
+              <input type="float" name="r" class="form-control" id="r" required>
+              <label for="r">Interest rate</label>
+            </div>
+
+            <div class="input-block" id="input-block-s">
+              <input type="float" name="s" class="form-control" id="s" required>
+              <label for="s">Strike price</label><br>
+            </div>
+
+            <div class="dropdown-block" id="dropdown-block-country">
+              <select type = "number" name="country" class="form-control" id="country" required>
+                <option disabled selected value > Select an option </option>
+                <option value="US">US</option>
+                <option value="EU">EU</option>
+              </select>
+              <label for="country" id="dropdown-block-label">Option type</label>
+            </div>
+
+            <div class="input-block" id="input-block-c">
+              <input type="float" name="c" class="form-control" id="c" required>
+              <label for="c">Dividend yield</label>
+            </div>
+
+            <div class="input-block" id="input-block-T">
+              <input type="float" name="T" class="form-control" id="T" required>
+              <label for="T">Time to maturity</label>
+            </div>
+
+            <div class="dropdown-block" id="input-block-cp">
+              <select type = "number" name="cp" class="form-control" id="cp" required >
+                <option disabled selected value > Select an option </option>
+                <option value= 1>Call</option>
+                <option value= -1>Put</option>
+              </select>
+              <label for="cp" id="dropdown-block-label">Call or put</label>
+            </div>
+
+            <input type="submit" value="SUBMIT" required><br>
+            <!-- <p for="submit"><strong>Submit inputs here</strong></p> -->
+
+          </form>
+        </div>
+      </div>
+      <div id="footer">
+        <p>Copyright belongs to Nhat Pham</p>
+      </div>
+    </div>
+
+  </body>
+</html>
