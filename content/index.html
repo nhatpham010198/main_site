@@ -54,7 +54,7 @@
 
         <p>In the binomial model, the stock's future price is determined by 2 factors, u and d, which are the percentages of price changes in the upstate and downstate of the next period. Note that u.d=1. If BABA is worth 200/share today, and \(u = 105\%\), \(d=\frac{1}{u} \approx 95.24\%\). It means if the current price is 210 , at cell(1,1), the upstate in the next period, cell(2,2), is \(210u=220.05\). And the downstate, cell(2,1), is 200. As \(u.d=1\), cell(2,1) is the upstate of cell (1,0) and downstate of cell(1,1). Following this logic, the price lattice of the stock for 10 periods looks like this:</p>
 
-        <img class="img" src="file:///Users/nhatpham/Desktop/visual/templates/Price_lattice.jpg">
+        <img class="img" src="Price_lattice.jpg">
         <!-- <img src = "{{ url_for('static', filename = 'Price_lattice.jpg')}}" class="image"> -->
 
         <p>To start off, we need to calculate the payoff of the option at maturity. Imagine we are at cell (9,9) where the price is 310.27. At maturity, period 10, the stock price is 325.78 in the upstate and 295.49 in the downstate where option returns are 100.78 and 70.49, respectively. The system of equations corresponding to this information is </p>
@@ -64,7 +64,7 @@
 
         <p>Solving these equations yield \(x=-220.59\) USD \(y = 1\), meaning the option price is \(-220.59+1*310.27 = 89.68\) at (9,9). </p>
 
-        <img class="img" src="file:///Users/nhatpham/Desktop/visual/templates/Value.jpg">
+        <img class="img" src="Value.jpg">
         <!-- <img src = "{{ url_for('static', filename = 'Value.jpg')}}" class="image"> -->
 
         <p>Let’s step back one period to cell (8,8), what is the fair price of the option at this state? The only thing we need to notice here is that the payoff of the option is no longer \(max(P-S_T,0)\) because we cannot exercise the option before its maturity at period 9. Hence, the option can make either 91.43 in the upstate or 62.02 in the downstate. Therefore, the corresponding equations are:</p>
