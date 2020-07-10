@@ -1,0 +1,162 @@
+/* Main structure */
+body {
+  background-color: #f3f3f3;
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3{
+  color: #457cb7;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+#container {
+  background-color: white;
+  width: 1000px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+#header {
+  background-color: white;
+  color: #457cb7;
+  text-align: center;
+}
+
+#footer{
+  clear: both;
+  padding: 10px;
+  background-color: #85a0c7;
+  color: white ;
+  text-align: right;
+}
+
+
+
+#nav{
+  width: 220px;
+  float: left;
+  color: white;
+}
+
+nav ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#nav.selected{
+  font-weight: bold;
+}
+
+.menu{
+  line-height: 40px;
+}
+
+
+#ul-linkedin{
+  padding-inline-start: 0px;
+}
+
+
+#linkedin{
+  display: flex;
+  background: #e3edf7;
+  height: 35px;
+  width: 35px;
+  margin: 0 5px;
+  padding-inline-start: 0px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+              -6px -6px 10px -1px rgba(225,225,225,0.7);
+  border: 1px solid rgba(0,0,0,0);
+  transition: transform  0.5s;
+}
+
+#linkedin i{
+  font-size: 35px;
+  color: #777;
+  transition: transform 0.2s;
+}
+
+#linkedin:hover{
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+              inset -4px -4px 6px -1px rgba(225,225,225,0.7),
+              -0.5px -0.5px 0px  rgba(225,225,225,1),
+              0.5px 0.5px 0px  rgba(0,0,0,0.15),
+              0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.01);
+  transform: translateY(2px);
+}
+
+#linkedin:hover i{
+  text-transform: scale(0.9);
+}
+
+a:hover .fa-linkedin{
+  color: #0e76a8
+}
+
+.text{
+  line-height: 1.5em;
+}
+
+/* Grid edit */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2px 2px;
+  height: 200px;
+  width: 750px;
+  float: right;
+  text-align: justify;
+  margin-bottom: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  position: relative;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.title{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  text-align: center;
+  z-index:1;
+  color: white;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.chapter > p, .brief > p{
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+
+}
+
+.chapter > p > a, .brief > p > a {
+  color: white;
+}

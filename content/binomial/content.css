@@ -55,6 +55,10 @@ nav ul{
   line-height: 40px;
 }
 
+.menu > .menu-text > .sub-menu{
+  text-decoration: none;
+}
+
 a {
   color: black;
   font-weight: bold;
@@ -119,4 +123,13 @@ a {
 
 a:hover .fa-linkedin{
   color: #0e76a8
+}
+
+.sub-menu{
+  padding-left: 20px;
+}
+
+.sub-menu > li > a{
+  font-weight: 200;
+
 }
